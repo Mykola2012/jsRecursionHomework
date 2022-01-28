@@ -17,7 +17,16 @@ function pow(base, exponent) {
   return result;
 }
 
+function powTwo(base, exponent) {
+  if (exponent === 1) {
+    return base;
+  } else {
+    return base * powTwo(base, exponent - 1);
+  }
+}
+
 console.log("pow() :>> ", pow(5, 5));
+console.log("powTwo() :>> ", powTwo(5, 5));
 
 console.groupEnd();
 
